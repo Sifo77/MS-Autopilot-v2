@@ -1,0 +1,1 @@
+﻿(Get-WmiObject -Class Win32_ComputerSystem | ForEach-Object {$_.Manufacturer, $_.Model, (Get-WmiObject -Class Win32_BIOS).SerialNumber -join ',' })
